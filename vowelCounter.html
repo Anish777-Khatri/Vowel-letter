@@ -1,0 +1,31 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VowelCounter</title>
+    <link rel="stylesheet" href="vowel.css">
+ </head>
+ <body>
+    <div class="container">
+        <h1>Vowel Counter</h1>
+        <textarea id="text" placeholder="Write your text"></textarea><br><br>
+        <button id="vowelCheck">Check</button>
+    </div>
+    <script>
+        const checkButton=document.getElementById("vowelCheck").onclick=function(){
+        const text=document.getElementById("text").value.toLowerCase();
+            const vowels="aeiou";
+            let vowelCount=0;
+
+            for(let char of text){ 
+                if(vowels.includes(char)){ //checks if character is vowel
+                    vowelCount++;
+                }
+            }
+            alert(`Number of vowel letters: ${vowelCount}`);
+        }
+
+    </script>
+ </body>
+ </html>
